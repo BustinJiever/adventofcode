@@ -1,0 +1,17 @@
+d <- read.table("input.txt",sep=" ")
+
+i=1; x=0; y=0; a=0
+while(i<=nrow(d)){
+  if(d$V1[i]=="forward") {
+    x=x+d$V2[i]
+
+  }
+  
+  if(d$V1[i]=="up") a=a-d$V2[i]
+  if(d$V1[i]=="down") a=a+d$V2[i]
+  i=i+1
+}
+
+a*x
+
+
